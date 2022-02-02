@@ -85,7 +85,7 @@ const run = async () => {
         const context = github.context;
         const owner = context.repo.owner
         const repo = context.repo.repo
-        const PR_NUMBER = github.context.payload.pull_request.number
+        const PR_NUMBER = github.context.payload.push.number
 
         if (!PR_NUMBER) {
             core.setFailed('No pull request number was found')
